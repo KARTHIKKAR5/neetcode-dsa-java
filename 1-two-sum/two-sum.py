@@ -1,11 +1,27 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
+        hashmap = {}
+
+        for i in range(len(nums)):
+            compliment = target - nums[i]
+
+            if compliment in hashmap:
+                return [hashmap[compliment], i]
+
+            hashmap[nums[i]] = i
+
+
+
+
+
+
+
+
+
+
+
         
 
-        for t in range(len(nums)):
-            for u in range(t + 1, len(nums)):
-                if nums[t] + nums[u] == target:
-                    return [t, u]
         
         
 
